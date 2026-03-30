@@ -30,8 +30,9 @@
 //   );
 // }
 
-import { Card, CardContent } from "@/components/ui/card";
+// import { Card, CardContent } from "@/components/ui/card";
 import { FaHospital, FaUniversity, FaChartLine } from "react-icons/fa";
+import { Card, CardContent } from "./ui/card";
 
 export default function Experience() {
   const experiences = [
