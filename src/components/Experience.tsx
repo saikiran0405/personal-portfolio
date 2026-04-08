@@ -1,38 +1,87 @@
-// export default function Experience() {
-//   return (
-//     <section id="experience" className="relative bg-gray-100 pt-20">
-//       <div className="mx-auto px-6">
+// import { Badge } from "@/components/ui/badge";
 
-//         <h2 className="text-3xl font-semibold mb-10">
+// export default function Experience() {
+//   const experiences = [
+//     {
+//       company: "Banner Health",
+//       role: "Full Stack Developer",
+//       duration: "2024 - Present",
+//       desc: "Built healthcare platform for 50K+ patients with real-time scheduling and AI workflows.",
+//       logo: "/logos/banner_health.jpg",
+//     },
+//     {
+//       company: "JPMC",
+//       role: "Full Stack Developer",
+//       duration: "2021 - 2022",
+//       desc: "Developed fraud processing system using Kafka and microservices improving throughput.",
+//       logo: "/logos/jpmc.jpeg",
+//     },
+//     {
+//       company: "Principal Financial Group",
+//       role: "Software Engineer",
+//       duration: "2018 - 2021",
+//       desc: "Built financial analytics platform with scalable backend and real-time dashboards.",
+//       logo: "/logos/principal.jpeg",
+//     },
+//   ];
+
+//   return (
+//     <section id="experience" className="bg-gray-100 py-24">
+//       <div className="max-w-6xl mx-auto px-6">
+
+//         <h2 className="text-3xl font-bold mb-12">
 //           Work Experience
 //         </h2>
 
-//         <div className="space-y-6">
+//         <div className="flex flex-col gap-10">
 
-//           <div className="bg-white p-6 rounded-xl shadow-sm">
-//             <h3 className="font-semibold">Banner Health</h3>
-//             <p className="text-gray-600 mt-2">
-//               Built scalable healthcare platform handling 50K+ users.
-//             </p>
-//           </div>
+//           {experiences.map((exp, index) => (
+//             <div key={index} className="flex items-stretch">
 
-//           <div className="bg-white p-6 rounded-xl shadow-sm">
-//             <h3 className="font-semibold">JPMC</h3>
-//             <p className="text-gray-600 mt-2">
-//               Developed fraud processing system using Kafka.
-//             </p>
-//           </div>
+//               {/* LOGO BOX (SQUARE) */}
+//               <div className="w-[80px] h-[80px] bg-white border border-gray-300 shadow-sm flex items-center justify-center rounded-l-xl">
+//                 <img
+//                   src={exp.logo}
+//                   alt={exp.company}
+//                   className="w-10 h-10 object-contain"
+//                 />
+//               </div>
+
+//               {/* CONTENT BOX (ATTACHED) */}
+//               <div className="flex-1 bg-white border border-gray-300 border-l-0 shadow-sm rounded-r-xl p-6">
+
+//                 <div className="flex flex-wrap items-center gap-2">
+
+//                   <h3 className="text-lg font-semibold">
+//                     {exp.company}
+//                   </h3>
+
+//                   <Badge variant="secondary" className="text-xs">
+//                     {exp.role}
+//                   </Badge>
+
+//                   <Badge variant="outline" className="text-xs">
+//                     {exp.duration}
+//                   </Badge>
+
+//                 </div>
+
+//                 <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-3xl">
+//                   {exp.desc}
+//                 </p>
+
+//               </div>
+
+//             </div>
+//           ))}
 
 //         </div>
-
 //       </div>
 //     </section>
 //   );
 // }
 
-// import { Card, CardContent } from "@/components/ui/card";
-import { FaHospital, FaUniversity, FaChartLine } from "react-icons/fa";
-import { Card, CardContent } from "./ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   const experiences = [
@@ -41,70 +90,80 @@ export default function Experience() {
       role: "Full Stack Developer",
       duration: "2024 - Present",
       desc: "Built healthcare platform for 50K+ patients with real-time scheduling and AI workflows.",
-      icon: <FaHospital />,
+      logo: "/logos/banner_health.jpg",
     },
     {
       company: "JPMC",
       role: "Full Stack Developer",
       duration: "2021 - 2022",
       desc: "Developed fraud processing system using Kafka and microservices improving throughput.",
-      icon: <FaUniversity />,
+      logo: "/logos/jpmc.jpeg",
     },
     {
       company: "Principal Financial Group",
       role: "Software Engineer",
       duration: "2018 - 2021",
       desc: "Built financial analytics platform with scalable backend and real-time dashboards.",
-      icon: <FaChartLine />,
+      logo: "/logos/principal.jpeg",
     },
   ];
 
   return (
     <section id="experience" className="bg-gray-100 py-24">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-3xl font-bold mb-16">
+        <h2 className="text-3xl font-bold mb-8">
           Work Experience
         </h2>
 
-        <div className="relative flex flex-col gap-12">
+        <div className="flex flex-col gap-6">
 
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className={`relative flex ${
-                index % 2 === 0 ? "justify-start" : "justify-end"
-              }`}
-            >
-              {/* CONNECTOR LINE */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-300 hidden md:block"></div>
+          {experiences.map((exp, index) => {
+            const isReverse = index % 2 !== 0;
 
-              {/* CARD */}
-              <Card className="w-full md:w-[45%] backdrop-blur-xl bg-white/70 border border-gray-200 shadow-lg hover:shadow-2xl transition duration-300 rounded-2xl">
-                <CardContent className="p-6">
+            return (
+              <div
+                key={index}
+                className={`flex items-stretch ${
+                  isReverse ? "flex-row-reverse" : ""
+                }`}
+              >
+                {/* LOGO */}
+                <div className="w-[120px] min-w-[120px] h-[120px] bg-white border border-gray-300 shadow-sm flex items-center justify-center">
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-full h-full object-fill"
+                  />
+                </div>
 
-                  {/* ICON */}
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-4">
-                    {exp.icon}
+                {/* CONTENT */}
+                <div className="flex-1 h-[120px] bg-white border border-gray-300 shadow-sm p-6 flex flex-col justify-center">
+
+                  <div className="flex flex-wrap items-center gap-2">
+
+                    <h3 className="text-lg font-semibold">
+                      {exp.role}
+                    </h3>
+
+                    {/* <Badge variant="secondary" className="text-xs">
+                      {exp.role}
+                    </Badge> */}
+
+                    <Badge variant="outline" className="text-xs">
+                      {exp.duration}
+                    </Badge>
+
                   </div>
 
-                  {/* TEXT */}
-                  <h3 className="text-lg font-semibold">
-                    {exp.company}
-                  </h3>
-
-                  <p className="text-sm text-gray-500">
-                    {exp.role} • {exp.duration}
-                  </p>
-
-                  <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-3xl">
                     {exp.desc}
                   </p>
 
-                </CardContent>
-              </Card>
-            </div>
-          ))}
+                </div>
+              </div>
+            );
+          })}
 
         </div>
       </div>
