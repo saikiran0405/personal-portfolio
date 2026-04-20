@@ -4,16 +4,22 @@ import { Button } from "@/components/ui/button";
 export default function Projects() {
   const projects = [
     {
-      title: "Public Speaking Practice App",
-      image: "/speech.png",
-      desc: "Web-based platform for practicing public speaking with real-time speech and body language feedback.",
-      links: [{ label: "GitHub", url: "https://github.com/Anjali0407-git/public_speaking_app" }, { label: "Demo", url: "https://drive.google.com/file/d/17Xe7-5CWcfmo-cxSsaf8vqJN7xqrTQ_R/view" }, { label: "Paper", url: "https://github.com/Anjali0407-git/public_speaking_app/blob/stable/Public_Speaking_Practice_using_VR.pdf" }],
+      title: "Revive Gallery Marketplace",
+      image: "/marketplace.jpg",
+      desc: "Secure marketplace with trust scoring, reviews, and chat-based buying/selling system.",
+      links: [{ label: "GitHub", url: "https://github.com/SriHarikaV/Revive_Gallery/commits/main/?author=SaiKiran0407" }],
     },
     {
       title: "SAMS",
       image: "/attendance.png",
       desc: "Smart Attendance Management System using facial recognition and webcam with admin and student dashboards.",
       links: [{ label: "GitHub", url: "https://github.com/Anjali0407-git/SAMS-facial-recognition" }],
+    },
+    {
+      title: "Public Speaking Practice App",
+      image: "/speech.png",
+      desc: "Web-based platform for practicing public speaking with real-time speech and body language feedback.",
+      links: [{ label: "GitHub", url: "https://github.com/Anjali0407-git/public_speaking_app" }, { label: "Demo", url: "https://drive.google.com/file/d/17Xe7-5CWcfmo-cxSsaf8vqJN7xqrTQ_R/view" }, { label: "Paper", url: "https://github.com/Anjali0407-git/public_speaking_app/blob/stable/Public_Speaking_Practice_using_VR.pdf" }],
     },
     {
       title: "Predicting Smoking & Drinking Habits",
@@ -25,15 +31,7 @@ export default function Projects() {
       title: "Weather Monitoring Safety System",
       image: "/drone_red.jpg",
       desc: "C++ system that processes sensor and weather data to support UAV and emergency systems.",
-      links: [{ label: "Documentation", url: "" }],
-    },
-    {
-      title: "Revive Gallery Marketplace",
-      image: "/marketplace.jpg",
-      desc: "Secure marketplace with trust scoring, reviews, and chat-based buying/selling system.",
-      links: [{ label: "GitHub", url: "#" }, { label: "PPT", url: "" }],
-    },
-    
+    },  
   ];
 
   return (
@@ -48,24 +46,19 @@ export default function Projects() {
         <div className="grid grid-cols-3 gap-6">
 
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="min-w-[250px]
-              "
-            >
-              <Card className="h-[420px] bg-white border border-gray-300 shadow-sm rounded-xl overflow-hidden flex flex-col hover:shadow-md transition">
+            <Card key={index} className="min-h-[360px] min-w-[250px] bg-white border-b-gray-50 shadow-sm rounded-xl overflow-hidden flex flex-col hover:shadow-md transition !py-0 !gap-0">
 
                 {/* IMAGE */}
                 <div className="h-[180px] w-full overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                    className="w-full h-full object-fill hover:scale-105 transition duration-300"
                   />
                 </div>
 
                 {/* CONTENT */}
-                <CardContent className="flex flex-col justify-between flex-1 p-5">
+                <CardContent className="flex flex-col justify-between flex-1 p-3">
 
                   {/* TEXT */}
                   <div>
@@ -79,12 +72,12 @@ export default function Projects() {
                   </div>
 
                   {/* LINKS */}
-                  {project.links.length > 0 && (
+                  {project.links && project.links.length > 0 && (
                     <div className="flex gap-2 mt-4 flex-wrap">
                       {project.links.map((link, i) => (
                         <Button
                           key={i}
-                          variant="outline"
+                          variant="purple-outline"
                           size="sm"
                           className="text-xs"
                           onClick={() => window.open(link.url)}
@@ -97,7 +90,6 @@ export default function Projects() {
 
                 </CardContent>
               </Card>
-            </div>
           ))}
 
         </div>
