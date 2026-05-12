@@ -11,7 +11,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-stretch gap-24">
         <div className="flex flex-col h-full justify-between">
           <div>
-            <h2 className="text-5xl pb-4 mt-12">Hello, I’m</h2>
+            <h2 className="text-5xl pb-4 mt-4">Hello, I’m</h2>
             <h2 className="text-5xl">Sai Kiran Beeram</h2>
 
             <p className="mt-6 text-gray-600">
@@ -53,7 +53,7 @@ export default function Home() {
           <div className="bg-white rounded-2xl shadow-xl p-16 flex flex-col md:flex-row gap-24">
             <div className="relative flex shrink-0 justify-center">
               <img
-                src="/profile-photo.png"
+                src="/kiran-photo2.png"
                 alt="Sai Kiran"
                 className="w-[240px] h-auto max-h-[260px] rounded-2xl shadow-lg object-cover"
               />
