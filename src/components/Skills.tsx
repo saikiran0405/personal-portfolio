@@ -184,7 +184,8 @@ export default function Skills() {
                 building a material donor mutual assist platform. The goal of
                 this system was to help organizations efficiently manage and
                 track donated resources like bicycles, computers, computer
-                parts, and monetary donations, ensuring transparency and real impact.
+                parts, and monetary donations, ensuring transparency and real
+                impact.
               </p>
 
               <p className="mt-4 text-gray-600">
@@ -193,7 +194,9 @@ export default function Skills() {
                 full lifecycle of each donated item. A key part of the
                 experience was enabling donors to see how their contributions
                 were being used, creating a stronger connection between donors
-                and beneficiaries. I did quick iterations, delivered improvements fast, and focused on delivering real value to users.
+                and beneficiaries. I did quick iterations, delivered
+                improvements fast, and focused on delivering real value to
+                users.
               </p>
             </div>
 

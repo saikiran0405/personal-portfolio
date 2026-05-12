@@ -28,13 +28,9 @@ export default function Experience() {
   return (
     <section id="experience" className="bg-gray-100 py-20 pt-36">
       <div className="max-w-4xl mx-auto">
-
-        <h2 className="text-3xl text-center font-bold mb-8">
-          Work Experience
-        </h2>
+        <h2 className="text-3xl text-center font-bold mb-8">Work Experience</h2>
 
         <div className="flex flex-col gap-6">
-
           {experiences.map((exp, index) => {
             const isReverse = index % 2 !== 0;
 
@@ -56,12 +52,8 @@ export default function Experience() {
 
                 {/* CONTENT */}
                 <div className="flex-1 h-[120px] bg-white border border-gray-300 shadow-sm p-6 flex flex-col justify-center">
-
                   <div className="flex flex-wrap items-center gap-2">
-
-                    <h3 className="text-lg font-semibold">
-                      {exp.role}
-                    </h3>
+                    <h3 className="text-lg font-semibold">{exp.role}</h3>
 
                     {/* <Badge variant="secondary" className="text-xs">
                       {exp.role}
@@ -70,18 +62,15 @@ export default function Experience() {
                     <Badge variant="outline" className="text-xs">
                       {exp.duration}
                     </Badge>
-
                   </div>
 
                   <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-3xl">
                     {exp.desc}
                   </p>
-
                 </div>
               </div>
             );
           })}
-
         </div>
       </div>
     </section>
