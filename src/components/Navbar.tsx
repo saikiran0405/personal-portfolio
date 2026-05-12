@@ -21,7 +21,7 @@ export default function Navbar() {
           <button className="text-black hover:font-bold">
             <a href="#skills">Skills</a>
           </button>
-          {/* <button className="text-black hover:font-bold"><a href="#projects">Open Source work</a></button> */}
+          <button className="text-black hover:font-bold"><a href="#open-source">Open Source work</a></button>
           <button className="text-black hover:font-bold">
             <a href="#projects">Projects</a>
           </button>

@@ -159,7 +159,7 @@ export default function Skills() {
 
           {/* AI */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">
+            <h3 className="text-xl font-semibold mb-6" id="open-source">
               AI & Intelligent Systems
             </h3>
             <div className="flex flex-wrap gap-10 items-center text-4xl">
@@ -172,14 +172,14 @@ export default function Skills() {
         </div>
       </div>
 
-      <div className="absolute left-0 right-0 -bottom-50 z-20 px-6">
+      <div className="absolute left-0 right-0 mt-14 z-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-12 flex flex-col gap-4">
+          <div className="bg-white rounded-2xl shadow-xl px-12 py-8 flex flex-col gap-4">
             <div>
               <h3 className="text-2xl font-semibold text-center">
                 Open Source Collaboration
               </h3>
-              <p className="mt-6 text-gray-600">
+              <p className="mt-8 text-gray-600">
                 I actively contributed to an open-source project focused on
                 building a material donor mutual assist platform. The goal of
                 this system was to help organizations efficiently manage and
@@ -204,7 +204,6 @@ export default function Skills() {
               <Button
                 variant="purple"
                 size="lg"
-                className="text-xs"
                 onClick={() =>
                   window.open(
                     "https://github.com/oss-slu/material-derailleur/commits/main/?author=SaiKiran0407",
