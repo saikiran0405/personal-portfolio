@@ -6,28 +6,28 @@ export default function Experience() {
       company: "Banner Health",
       role: "Full Stack Developer",
       duration: "2024 - Present",
-      desc: "Built healthcare platform for 50K+ patients with real-time scheduling and AI workflows.",
+      desc: "Built healthcare platform for patients and providers with real-time appointment scheduling and AI workflows.",
       logo: "/logos/banner_health.jpg",
     },
     {
       company: "JPMC",
       role: "Full Stack Developer",
       duration: "2021 - 2022",
-      desc: "Developed fraud processing system using Kafka and microservices improving throughput.",
+      desc: "Worked on a fraud and claims platform that streamlined dispute handling, helping teams resolve customer issues faster and more efficiently.",
       logo: "/logos/jpmc.jpeg",
     },
     {
       company: "Principal Financial Group",
       role: "Software Engineer",
       duration: "2018 - 2021",
-      desc: "Built financial analytics platform with scalable backend and real-time dashboards.",
+      desc: "Contributed to a financial platform that provided users with insights into their investments, track and manage their financial goals.",
       logo: "/logos/principal.jpeg",
     },
   ];
 
   return (
-    <section id="experience" className="bg-gray-100 py-24 pt-36">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="experience" className="bg-gray-100 py-20 pt-36">
+      <div className="max-w-4xl mx-auto">
 
         <h2 className="text-3xl text-center font-bold mb-8">
           Work Experience

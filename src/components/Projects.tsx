@@ -35,10 +35,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-gray-100 py-24">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="bg-gray-100 py-20 pb-36">
+      <div className="max-w-4xl mx-auto">
 
-        <h2 className="text-3xl font-bold mb-12">
+        <h2 className="text-3xl text-center font-bold mb-12">
           Projects
         </h2>
 
@@ -46,7 +46,7 @@ export default function Projects() {
         <div className="grid grid-cols-3 gap-6">
 
           {projects.map((project, index) => (
-            <Card key={index} className="min-h-[360px] min-w-[250px] bg-white border-b-gray-50 shadow-sm rounded-xl overflow-hidden flex flex-col hover:shadow-md transition !py-0 !gap-0">
+            <Card key={index} className="min-h-[360px] min-w-[250px] bg-white border-b-gray-50 shadow-sm rounded-lg overflow-hidden flex flex-col hover:shadow-md transition !py-0 !gap-0">
 
                 {/* IMAGE */}
                 <div className="h-[180px] w-full overflow-hidden">
